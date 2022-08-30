@@ -21,7 +21,7 @@ namespace EFashion.Web.Areas.Users.ViewModels
         override public DateTime? CreatedDate { get; set; } = DateTime.Now;
 
 
-        
+        [Display(Name ="Customer")]
         override public int CustomerId { get; set; }
 
        
