@@ -10,28 +10,30 @@ namespace EFashion.Web.Models
     [Table(name: "Items")]
     public class Item
     {
-
+        //details of items
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        virtual public int ItemId { get; set; }
+        virtual public int ItemId { get; set; }//item id
 
         [Required]
         [StringLength(150)]
-        virtual public string ItemName { get; set; }
+        virtual public string ItemName { get; set; }//item name
 
         [Required]
         [StringLength(20)]
-        virtual public string ItemType { get; set; }
+        virtual public string ItemType { get; set; }//item type
 
         [StringLength(350)]
-        virtual public string ItemDescription { get; set; }
+        virtual public string ItemDescription { get; set; }//item description
 
         [Required]
         [DefaultValue(true)]
-        virtual public bool IsAvailable { get; set; }
+        virtual public bool IsAvailable { get; set; }//is available
 
         [Required]
-        virtual public decimal? Price { get; set; }
+        virtual public decimal? Price { get; set; }//price
+
+        virtual public string ImageUrl { get; set; }//imgurl
 
       
 

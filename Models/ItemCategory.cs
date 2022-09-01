@@ -13,17 +13,17 @@ namespace EFashion.Web.Models
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        virtual public int ItemCategoryId { get; set; }
+        virtual public int ItemCategoryId { get; set; }//Itemcategory Id
 
         [Required]
         [StringLength(100)]
-        virtual public string ItemCategoryName { get; set; }
+        virtual public string ItemCategoryName { get; set; }//Itemcategory Name
 
         [Required]
         [DefaultValue(true)]
-        virtual public bool IsAvailable { get; set; }
+        virtual public bool IsAvailable { get; set; }//Itemcategory is avail
         [StringLength(1000)]
-       virtual public string ImageUrl { get; set; }
+       virtual public string ImageUrl { get; set; }//img url
 
         #region Navigation Properties to the Item Model
         

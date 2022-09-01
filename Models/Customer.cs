@@ -9,22 +9,22 @@ namespace EFashion.Web.Models
     [Table(name: "Customers")]
     public class Customer
     {
-
+        //details of customer
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
-        virtual public int CustomerId { get; set; }
+        virtual public int CustomerId { get; set; }//customer.Id
 
         [Required]
         [StringLength(50)]
-        virtual public string CustomerName { get; set; }
+        virtual public string CustomerName { get; set; }//customer.Name
 
         [Required]
-        virtual public string Email { get; set; }
+        virtual public string Email { get; set; }//email
 
         [Required]
         [StringLength(10)]
-        virtual public string Phonenumber { get; set; }
+        virtual public string Phonenumber { get; set; }//Phoneno
 
         
 

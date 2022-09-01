@@ -12,15 +12,15 @@ namespace EFashion.Web.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        virtual public int PaymentId { get; set; }
+        virtual public int PaymentId { get; set; }//id
 
         [Required]
         [StringLength(50)]
         [DefaultValue("PhonePe,GPay,Cash")]
-        virtual public string PaymentName { get; set; }
+        virtual public string PaymentName { get; set; }//payment name
 
         [Required]
-       virtual public DateTime? CreatedDate { get; set; }=DateTime.Now;
+       virtual public DateTime? CreatedDate { get; set; }=DateTime.Now;//created date
 
 
         #region Navigation Properties to the Customer Model 
@@ -51,10 +51,10 @@ namespace EFashion.Web.Models
 
         [Required]
         [StringLength(10)]
-        virtual public string MobileNumber { get; set; }
+        virtual public string MobileNumber { get; set; }//mob no
 
         [Required]
-        virtual public decimal AmountPaid { get; set; }
+        virtual public decimal AmountPaid { get; set; }//amt paid
 
     }
 }

@@ -48,6 +48,7 @@ namespace EFashion.Web.Migrations
                     ItemDescription = table.Column<string>(maxLength: 350, nullable: true),
                     IsAvailable = table.Column<bool>(nullable: false),
                     Price = table.Column<decimal>(nullable: false),
+                    ImageUrl = table.Column<string>(nullable: true),
                     ItemCategoryId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

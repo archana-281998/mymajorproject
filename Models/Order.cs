@@ -11,15 +11,15 @@ namespace EFashion.Web.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        virtual public int OrderId { get; set; }
+        virtual public int OrderId { get; set; }//orderid
         [Required]
-        virtual public System.DateTime OrderDate { get; set; } = DateTime.Now;
+        virtual public System.DateTime OrderDate { get; set; } = DateTime.Now;//orderdate
 
-        virtual public decimal Discount { get; set; }
+        virtual public decimal Discount { get; set; }//discount
         [Required]
-        virtual public decimal Quantity { get; set; }
+        virtual public decimal Quantity { get; set; }//quantity
         [Required]
-        virtual public decimal Price { get; set; }
+        virtual public decimal Price { get; set; }//price
 
 
 

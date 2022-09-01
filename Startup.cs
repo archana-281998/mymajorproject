@@ -89,8 +89,8 @@ namespace EFashion.Web
                 config.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "Digital Police Web",
-                    Description = "Digital Police System - API version 1"
+                    Title = "EFashion Web",
+                    Description = "EFashion - API version 1"
                 });
             });
         }
@@ -112,7 +112,7 @@ namespace EFashion.Web
                 // Add the Swagger Documentation Generation Middleware
                 app.UseSwaggerUI(config =>
                 {
-                    config.SwaggerEndpoint("/swagger/v1/swagger.json", "Digital Police Web API v1");
+                    config.SwaggerEndpoint("/swagger/v1/swagger.json", "EFashion Web API v1");
                 });
             }
             else
@@ -148,8 +148,8 @@ namespace EFashion.Web
             });
 
             //Seed the Database with the System required Roles & User profiles
-            //ApplicationDbContextSeed.SeedIdentityRolesAsync(roleManager).Wait();
-            //ApplicationDbContextSeed.SeedIdentityUserAsync(userManager).Wait();
+            ApplicationDbContextSeed.SeedIdentityRolesAsync(roleManager).Wait();
+            ApplicationDbContextSeed.SeedIdentityUserAsync(userManager).Wait();
         }
     }
 }

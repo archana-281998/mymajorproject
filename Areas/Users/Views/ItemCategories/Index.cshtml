@@ -1,0 +1,60 @@
+﻿@model IEnumerable<EFashion.Web.Models.ItemCategory>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Item Categories</h1>
+
+<p>
+    <a asp-action="Create">Item Categories</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemCategoryName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsAvailable)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageUrl)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemCategoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsAvailable)
+            </td>
+            <td>
+                    <img src=" @Html.DisplayFor(modelItem => item.ImageUrl) " width="30%" height="40%"/>
+                    </td>
+
+                <td>
+           
+               <a asp-action="Edit" asp-route-id="@item.ItemCategoryId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ItemCategoryId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ItemCategoryId">Delete</a>
+            </td>
+        </tr>
+          
+            
+
+      
+  }
+    </tbody>
+  
+
+
+
+
+        
+    
+</table>

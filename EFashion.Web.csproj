@@ -23,9 +23,7 @@
   <ItemGroup>
     <Folder Include="Areas\Menus\Controllers\" />
     <Folder Include="Areas\Menus\ViewModels\" />
-    <Folder Include="Areas\Menus\Views\" />
-    <Folder Include="Areas\Users\Controllers\" />
-    <Folder Include="Areas\Users\Views\" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>
